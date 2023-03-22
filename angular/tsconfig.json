@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.prod.json",
+  "compilerOptions": {
+    "paths": {
+      "@najd.Md/items": [
+        "projects/items/src/public-api.ts"
+      ],
+      "@najd.Md/items/config": [
+        "projects/items/config/src/public-api.ts"
+      ],
+      "@proxy": ["projects/items/src/lib/proxy/index.ts"],
+      "@proxy/*": ["projects/items/src/lib/proxy/*"]
+    }
+  }
+}

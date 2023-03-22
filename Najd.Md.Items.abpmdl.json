@@ -1,0 +1,111 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "Najd.Md.Items.Domain.Shared": {
+      "path": "src/Najd.Md.Items.Domain.Shared/Najd.Md.Items.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "Najd.Md.Items.Domain": {
+      "path": "src/Najd.Md.Items.Domain/Najd.Md.Items.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "Najd.Md.Items.Application.Contracts": {
+      "path": "src/Najd.Md.Items.Application.Contracts/Najd.Md.Items.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "Najd.Md.Items.Application": {
+      "path": "src/Najd.Md.Items.Application/Najd.Md.Items.Application.abppkg.json",
+      "folder": "src"
+    },
+    "Najd.Md.Items.EntityFrameworkCore": {
+      "path": "src/Najd.Md.Items.EntityFrameworkCore/Najd.Md.Items.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "Najd.Md.Items.MongoDB": {
+      "path": "src/Najd.Md.Items.MongoDB/Najd.Md.Items.MongoDB.abppkg.json",
+      "folder": "src"
+    },
+    "Najd.Md.Items.HttpApi": {
+      "path": "src/Najd.Md.Items.HttpApi/Najd.Md.Items.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "Najd.Md.Items.HttpApi.Client": {
+      "path": "src/Najd.Md.Items.HttpApi.Client/Najd.Md.Items.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "Najd.Md.Items.TestBase": {
+      "path": "test/Najd.Md.Items.TestBase/Najd.Md.Items.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "Najd.Md.Items.EntityFrameworkCore.Tests": {
+      "path": "test/Najd.Md.Items.EntityFrameworkCore.Tests/Najd.Md.Items.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Najd.Md.Items.MongoDB.Tests": {
+      "path": "test/Najd.Md.Items.MongoDB.Tests/Najd.Md.Items.MongoDB.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Najd.Md.Items.Domain.Tests": {
+      "path": "test/Najd.Md.Items.Domain.Tests/Najd.Md.Items.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Najd.Md.Items.Application.Tests": {
+      "path": "test/Najd.Md.Items.Application.Tests/Najd.Md.Items.Application.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Najd.Md.Items.HttpApi.Host": {
+      "path": "host/Najd.Md.Items.HttpApi.Host/Najd.Md.Items.HttpApi.Host.abppkg.json",
+      "folder": "host"
+    },
+    "Najd.Md.Items.Web": {
+      "path": "src/Najd.Md.Items.Web/Najd.Md.Items.Web.abppkg.json",
+      "folder": "src"
+    },
+    "Najd.Md.Items.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/Najd.Md.Items.HttpApi.Client.ConsoleTestApp/Najd.Md.Items.HttpApi.Client.ConsoleTestApp.abppkg.json",
+      "folder": "test"
+    },
+    "Najd.Md.Items.Web.Host": {
+      "path": "host/Najd.Md.Items.Web.Host/Najd.Md.Items.Web.Host.abppkg.json",
+      "folder": "host"
+    },
+    "Najd.Md.Items.AuthServer": {
+      "path": "host/Najd.Md.Items.AuthServer/Najd.Md.Items.AuthServer.abppkg.json",
+      "folder": "host"
+    },
+    "Najd.Md.Items.Host.Shared": {
+      "path": "host/Najd.Md.Items.Host.Shared/Najd.Md.Items.Host.Shared.abppkg.json",
+      "folder": "host"
+    },
+    "Najd.Md.Items.Web.Unified": {
+      "path": "host/Najd.Md.Items.Web.Unified/Najd.Md.Items.Web.Unified.abppkg.json",
+      "folder": "host"
+    },
+    "Najd.Md.Items.Blazor": {
+      "path": "src/Najd.Md.Items.Blazor/Najd.Md.Items.Blazor.abppkg.json",
+      "folder": "src"
+    },
+    "Najd.Md.Items.Blazor.Host": {
+      "path": "host/Najd.Md.Items.Blazor.Host/Najd.Md.Items.Blazor.Host.abppkg.json",
+      "folder": "host"
+    },
+    "Najd.Md.Items.Blazor.Server": {
+      "path": "src/Najd.Md.Items.Blazor.Server/Najd.Md.Items.Blazor.Server.abppkg.json",
+      "folder": "src"
+    },
+    "Najd.Md.Items.Blazor.WebAssembly": {
+      "path": "src/Najd.Md.Items.Blazor.WebAssembly/Najd.Md.Items.Blazor.WebAssembly.abppkg.json",
+      "folder": "src"
+    },
+    "Najd.Md.Items.Blazor.Server.Host": {
+      "path": "host/Najd.Md.Items.Blazor.Server.Host/Najd.Md.Items.Blazor.Server.Host.abppkg.json",
+      "folder": "host"
+    }
+  }
+}
