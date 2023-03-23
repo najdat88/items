@@ -12,6 +12,16 @@ public class Program
 {
     public async static Task<int> Main(string[] args)
     {
+        // https://github.com/abpframework/abp/issues/11437
+        AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+        // https://github.com/abpframework/abp/issues/1387#issuecomment-506645119
+        Volo.Abp.FeatureManagement.AbpFeatureManagementDbProperties.DbTablePrefix = "auth";
+        Volo.Abp.Identity.AbpIdentityDbProperties.DbTablePrefix = "auth";
+        Volo.Abp.TenantManagement.AbpTenantManagementDbProperties.DbTablePrefix = "auth";
+        Volo.Abp.PermissionManagement.AbpPermissionManagementDbProperties.DbTablePrefix = "auth";
+        Volo.Abp.AuditLogging.AbpAuditLoggingDbProperties.DbTablePrefix = "core";
+        Volo.Abp.SettingManagement.AbpSettingManagementDbProperties.DbTablePrefix = "core";
+
         Log.Logger = new LoggerConfiguration()
 #if DEBUG
             .MinimumLevel.Debug()

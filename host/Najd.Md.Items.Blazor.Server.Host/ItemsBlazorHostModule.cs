@@ -118,7 +118,7 @@ public class ItemsBlazorHostModule : AbpModule
 
         Configure<AbpDbContextOptions>(options =>
         {
-            options.UseSqlServer();
+            options.UseNpgsql();
         });
 
         Configure<AbpBundlingOptions>(options =>

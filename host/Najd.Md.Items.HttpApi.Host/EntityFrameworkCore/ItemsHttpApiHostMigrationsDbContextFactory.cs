@@ -12,7 +12,7 @@ public class ItemsHttpApiHostMigrationsDbContextFactory : IDesignTimeDbContextFa
         var configuration = BuildConfiguration();
 
         var builder = new DbContextOptionsBuilder<ItemsHttpApiHostMigrationsDbContext>()
-            .UseSqlServer(configuration.GetConnectionString("Items"));
+            .UseNpgsql(configuration.GetConnectionString("Items"));
 
         return new ItemsHttpApiHostMigrationsDbContext(builder.Options);
     }
