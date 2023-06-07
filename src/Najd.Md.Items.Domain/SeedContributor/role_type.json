@@ -1,0 +1,130 @@
+﻿[
+  {
+    "Id": "ecc97ee3-7f6b-405f-9174-5d5f9ed45ca5",
+    "Code": "GEN0",
+    "Name": "Party General",
+    "LineOrder": 1
+  },
+  {
+    "Id": "0489d29b-7b42-481e-9202-becb39f35841",
+    "Code": "SV01",
+    "Name": "Lead",
+    "LineOrder": 2
+  },
+  {
+    "Id": "fae4428f-b375-4f62-b1dc-f9f5a5342bd8",
+    "Code": "SC01",
+    "Name": "Customer",
+    "LineOrder": 3,
+    "PartyRoles": [
+      {
+        "Id": "2b67a864-9efa-4b97-b7e2-5cd568999691",
+        "Party_Id": "778bbcd0-cb38-4e29-a0c3-6e6382e20734"
+      }
+    ]
+  },
+  {
+    "Id": "7f3df21f-1c93-4cb8-9324-4bfc2b1f2ba5",
+    "Code": "SV01",
+    "Name": "Vendor",
+    "LineOrder": 4
+  },
+  {
+    "Id": "d0159e23-dc1e-4baf-9baf-3fc01e564d07",
+    "Code": "SV01",
+    "Name": "Bidder",
+    "LineOrder": 5
+  },
+  {
+    "Id": "c0323ea3-1bb3-4247-adf8-4539c880e11a",
+    "Code": "SV01",
+    "Name": "FreeLancer",
+    "LineOrder": 6
+  },
+  {
+    "Id": "89aba691-3160-498d-ac48-435a3e70ecf7",
+    "Code": "SV01",
+    "Name": "FreeLancer",
+    "LineOrder": 7
+  },
+  {
+    "Id": "8dc5ba2d-5006-4ace-836c-0972543e9af7",
+    "Code": "COA01",
+    "Name": "Account Holder",
+    "LineOrder": 8
+  },
+  {
+    "Id": "54a34022-0e47-4ae7-8720-f854557fd689",
+    "Code": "W01",
+    "Name": "Ship-To-Party",
+    "Description": "Transactions and Associated Roles - Delivery of goods",
+    "LineOrder": 9
+  },
+  {
+    "Id": "9d1332ff-2e2b-4fc8-b442-5984eaca1fe5",
+    "Code": "W01",
+    "Name": "Bill-To-Party",
+    "LineOrder": 10
+  },
+  {
+    "Id": "3c689150-0d77-43e2-9c70-708e75a74d58",
+    "Code": "W02",
+    "Name": "Sold-To-Party",
+    "Description": "Transactions and Associated Roles - Order",
+    "LineOrder": 11
+  },
+  {
+    "Id": "52dfaf44-2ded-4266-a18d-dd98ad18fd0d",
+    "Code": "ER01",
+    "Name": "Purchasing",
+    "LineOrder": 12
+  },
+  {
+    "Id": "b9230409-9ae5-4ff4-900d-24ad29944717",
+    "Code": "ER01",
+    "Name": "Contact-Person",
+    "LineOrder": 13
+  },
+  {
+    "Id": "752df77b-e0dc-4f59-b422-58a951de6c52",
+    "Code": "ER01",
+    "Name": "Sales Employee",
+    "LineOrder": 14
+  },
+  {
+    "Id": "ecad5cb4-b8a5-42b9-bd11-881d4c48d573",
+    "Code": "ER01",
+    "Name": "Technician",
+    "LineOrder": 15
+  },
+  {
+    "Id": "4fc9b987-2809-459c-b9d1-cc1e5867fa5e",
+    "Code": "ER01",
+    "Name": "WH manager",
+    "LineOrder": 16
+  },
+  {
+    "Id": "23d49ab1-5cab-4cff-b8d0-455aa2ed9f70",
+    "Code": "ER01",
+    "Name": "Purchasing manager",
+    "LineOrder": 17
+  },
+  {
+    "Id": "82f0cc58-c638-433e-9a69-a538554c64c3",
+    "Code": "ER01",
+    "Name": "Sales manager",
+    "LineOrder": 18
+  },
+  {
+    "Id": "36e0a2ec-ecb3-4bd0-a8ff-092723c16304",
+    "Code": "ER01",
+    "Name": "Project manager",
+    "LineOrder": 19
+  },
+  {
+    "Id": "12fa8af6-362b-4041-890f-bbefac3d7a75",
+    "Code": "ER01",
+    "Name": "Accountant",
+    "LineOrder": 20
+  }
+]

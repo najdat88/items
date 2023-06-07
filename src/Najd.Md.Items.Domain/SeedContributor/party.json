@@ -1,0 +1,16 @@
+﻿[
+  {
+    "Id": "778bbcd0-cb38-4e29-a0c3-6e6382e20734",
+    "Code": "cash",
+    "Name": "عميل نقدي",
+    "LineOrder": 1,
+    "PartyType_Code": "prs",
+    "Person": {
+      "Id": "3425769a-0612-48c1-96f4-a4f1699d9e97",
+      "FirstName": "عميل نقدي",
+      "MiddleName": "",
+      "LastName": "",
+      "Gender_Id": ""
+    }
+  }
+]

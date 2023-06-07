@@ -1,0 +1,100 @@
+﻿[
+  {
+    "Code": "gdoc",
+    "Name": "General document",
+    "LineOrder": 1
+  },
+  {
+    "Code": "cpay",
+    "Name": "Customer payment",
+    "LineOrder": 2
+  },
+  {
+    "Id": "bd707de4-5dec-4103-b4c4-3c9184255a8c",
+    "Code": "cinv",
+    "Name": "Customer invoice",
+    "LineOrder": 2
+  },
+  {
+    "Code": "cmem",
+    "Name": "customer credit memo",
+    "LineOrder": 2
+  },
+  {
+    "Code": "vpay",
+    "Name": "Vendor payment",
+    "LineOrder": 2
+  },
+  {
+    "Code": "vinv",
+    "Name": "Vendor invoice",
+    "LineOrder": 2
+  },
+  {
+    "Code": "vmem",
+    "Name": "Vendor credit memo",
+    "LineOrder": 2
+  },
+  {
+    "Code": "so",
+    "Name": "Sale Order",
+    "LineOrder": 2
+  },
+  {
+    "Code": "po",
+    "Name": "Purchase Order",
+    "LineOrder": 2
+  },
+  {
+    "Code": "quot",
+    "Name": "Quotation",
+    "LineOrder": 2
+  },
+  {
+    "Code": "cont",
+    "Name": "Contract",
+    "LineOrder": 2
+  },
+  {
+    "Code": "pinv",
+    "Name": "pro forma invoices",
+    "LineOrder": 2
+  },
+  {
+    "Code": "wiss",
+    "Name": "Goods issue",
+    "LineOrder": 2
+  },
+  {
+    "Code": "wrec",
+    "Name": "Goods receipt",
+    "LineOrder": 2
+  },
+  {
+    "Code": "wdev",
+    "Name": "Goods issue /delivery",
+    "LineOrder": 2
+  },
+  {
+    "Code": "wnet",
+    "Name": "Net goods receipt",
+    "LineOrder": 2
+  },
+  {
+    "Code": "cdoc",
+    "Name": "Cancellation documents",
+    "LineOrder": 2
+  },
+  {
+    "Id": "5b5f9052-ab7f-4ee7-9084-52be8b2db802",
+    "Code": "firv",
+    "Name": "Receipt Voucher",
+    "LineOrder": 2
+  },
+  {
+    "Id": "88ce9c12-0f90-45a2-8a41-9ea1ef97adb8",
+    "Code": "fipv",
+    "Name": "Payment Voucher",
+    "LineOrder": 2
+  }
+]

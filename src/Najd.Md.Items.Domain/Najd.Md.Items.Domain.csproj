@@ -9,8 +9,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="SeedContributor\catalog.json" />
+    <None Remove="SeedContributor\document_type.json" />
+    <None Remove="SeedContributor\item.json" />
+    <None Remove="SeedContributor\item_type.json" />
+    <None Remove="SeedContributor\party.json" />
+    <None Remove="SeedContributor\party_type.json" />
+    <None Remove="SeedContributor\role_type.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SeedContributor\catalog.json" />
+    <EmbeddedResource Include="SeedContributor\document_type.json" />
+    <EmbeddedResource Include="SeedContributor\item.json" />
+    <EmbeddedResource Include="SeedContributor\item_type.json" />
+    <EmbeddedResource Include="SeedContributor\party.json" />
+    <EmbeddedResource Include="SeedContributor\party_type.json" />
+    <EmbeddedResource Include="SeedContributor\role_type.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Volo.Abp.Ddd.Domain" Version="7.1.0" />
     <ProjectReference Include="..\Najd.Md.Items.Domain.Shared\Najd.Md.Items.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Items\UnitOfMeasurement\" />
   </ItemGroup>
 
 </Project>

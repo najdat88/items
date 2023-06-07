@@ -1,0 +1,239 @@
+﻿[
+  {
+    "Id": "e59ca216-2b31-4d4f-baa9-b5b4b6919df8",
+    "Code": "PAK0001",
+    "Name": "انترنت 1 جيغا اسبوعي",
+    "ItemType_Id": "3f2cd216-26a1-4211-9d48-010641715350",
+    "AttributeSet_Id": null,
+    "ShortDescription": "انترنت 1 جيغا اسبوعي",
+    "Description": "",
+    "MultiDimensionalBaseProduct": false,
+    "Parent_Id": null,
+    "Thumbnail": "/uploads/operator/1.png",
+    "WorkflowProcessPayload": "[{\n  \"key\": \"mobile_number\",\n  \"label\": \"رقم الجوال\",\n  \"type\": \"String\",\n  \"value\": null,\n  \"hidden\": false,\n  \"index\": 1\n},{\n  \"key\": \"operator\",\n  \"label\": \"مزود الخدمة\",\n  \"type\": \"String\",\n  \"value\": null,\n  \"hidden\": false,\n  \"index\": 2\n}]",
+    "ItemCategories": [
+      {
+        "Id": "70f441f3-1dc1-4f35-b7f0-922800561bd4",
+        "Category_Id": "39a61cc9-c6e6-4da2-98cf-9d19398056fb"
+      }
+    ],
+    "ItemPrices": [
+      {
+        "Id": "974d2f0a-7eb7-4b35-9729-c2173660b677",
+        "Price": 88.99,
+        "FromDate": "2021-01-01",
+        "ToDate": "2021-02-01"
+      },
+      {
+        "Id": "d3d13c0f-8c9a-4225-b5ff-0085eb804bc8",
+        "Price": 77.99,
+        "FromDate": "2021-02-01",
+        "ToDate": "2021-05-01"
+      },
+      {
+        "Id": "16e63565-3614-4f3d-bf66-5ab5615da562",
+        "Price": 55.33
+      }
+    ]
+  },
+  {
+    "Id": "59a3d16a-477e-49bc-801d-a82f668738d2",
+    "Code": "PAK0002",
+    "Name": "انترنت 10 جيغا",
+    "ItemType_Id": "3f2cd216-26a1-4211-9d48-010641715350",
+    "AttributeSet_Id": null,
+    "ShortDescription": "انترنت 10 جيغا",
+    "Description": "",
+    "MultiDimensionalBaseProduct": false,
+    "Parent_Id": null,
+    "Thumbnail": "/uploads/operator/1.png",
+    "WorkflowProcessPayload": "[{\n  \"key\": \"mobile_number\",\n  \"label\": \"رقم الجوال\",\n  \"type\": \"String\",\n  \"value\": null,\n  \"hidden\": false,\n  \"index\": 1\n},{\n  \"key\": \"operator\",\n  \"label\": \"مزود الخدمة\",\n  \"type\": \"String\",\n  \"value\": null,\n  \"hidden\": false,\n  \"index\": 2\n}]",
+    "ItemCategories": [
+      {
+        "Id": "c5ebc072-8d43-4675-8023-3806efc90a62",
+        "Category_Id": "39a61cc9-c6e6-4da2-98cf-9d19398056fb"
+      }
+    ],
+    "ItemFiles": [
+      {
+        "Id": "1d37a5a0-91e7-44e1-95bc-4e68b74fdb7a",
+        "File": "/uploads/accounts/8.png",
+        "LineOrder": 1
+      },
+      {
+        "Id": "60456250-1f3d-4664-9b8d-a8e7f036464e",
+        "File": "/uploads/accounts/10.png",
+        "LineOrder": 2
+      }
+    ],
+    "ItemPrices": [
+      {
+        "Id": "f0534b6a-83e6-4fe2-a453-c3ff8369f380",
+        "Price": 99.99
+      }
+    ]
+  },
+  {
+    "Id": "e0b7db1e-e56d-43da-8be7-4cc1f1766462",
+    "Code": "PAK0001",
+    "Name": "الو اوروبا 1 ساعة",
+    "ItemType_Id": "3f2cd216-26a1-4211-9d48-010641715350",
+    "AttributeSet_Id": null,
+    "ShortDescription": "60 دقيقة اتصال لـ(اوروبا)",
+    "Description": "",
+    "MultiDimensionalBaseProduct": false,
+    "Parent_Id": null,
+    "Thumbnail": "/uploads/operator/1.png",
+    "WorkflowProcessPayload": "[{\n  \"key\": \"mobile_number\",\n  \"label\": \"رقم الجوال\",\n  \"type\": \"String\",\n  \"value\": null,\n  \"hidden\": false,\n  \"index\": 1\n},{\n  \"key\": \"operator\",\n  \"label\": \"مزود الخدمة\",\n  \"type\": \"String\",\n  \"value\": null,\n  \"hidden\": false,\n  \"index\": 2\n}]",
+    "ItemCategories": [
+      {
+        "Id": "be5fc7b7-86c5-49e7-8ab3-33a9f2fb81b0",
+        "Category_Id": "9c29c757-6a21-463d-b698-0f274ce77f0b"
+      }
+    ]
+  },
+  {
+    "Id": "461ecccb-a84a-4fe2-851c-9f340ad0a2c0",
+    "Code": "TR01",
+    "Name": "اسطنبول ازمير",
+    "ItemType_Id": "3f2cd216-26a1-4211-9d48-010641715350",
+    "AttributeSet_Id": null,
+    "ShortDescription": "بجاسوس",
+    "Description": "",
+    "MultiDimensionalBaseProduct": false,
+    "Parent_Id": null,
+    "WorkflowProcessPayload": "[{\n  \"key\": \"number_of_bead\",\n  \"label\": \"عدد الاسرة\",\n  \"type\": \"String\",\n  \"value\": null,\n  \"hidden\": false,\n  \"index\": 1\n}]",
+    "ItemCategories": [
+      {
+        "Id": "91174e82-99d0-4602-b318-443eed5ae09e",
+        "Category_Id": "435a1572-d94a-4473-bca4-f55d378d58ac"
+      }
+    ],
+    "ItemPrices": [
+      {
+        "Id": "67582e40-ae80-4c4c-899a-6cc48e1e6286",
+        "Price": 99.99
+      }
+    ]
+  },
+  {
+    "Id": "594eb12c-0d19-4674-a9c8-48e030cdc686",
+    "Code": "TR02",
+    "Name": "اسطنبول - عنتاب",
+    "ItemType_Id": "3f2cd216-26a1-4211-9d48-010641715350",
+    "AttributeSet_Id": null,
+    "ShortDescription": "التركية للطيران",
+    "Description": "",
+    "MultiDimensionalBaseProduct": false,
+    "Parent_Id": null,
+    "WorkflowProcessPayload": "[{\n  \"key\": \"set_number\",\n  \"label\": \"المقاعد\",\n  \"type\": \"String\",\n  \"value\": null,\n  \"hidden\": false,\n  \"index\": 1\n}]",
+    "ItemCategories": [
+      {
+        "Id": "5ebbf439-1824-49df-9cb1-08145d6c788b",
+        "Category_Id": "435a1572-d94a-4473-bca4-f55d378d58ac"
+      }
+    ],
+    "ItemPrices": [
+      {
+        "Id": "78d1c8db-e3f2-4922-ad0f-7e68551d7838",
+        "Price": 99.99
+      }
+    ]
+  },
+  {
+    "Id": "a5f27087-286b-4995-b025-ff635273c5e6",
+    "Code": "",
+    "Name": "فيات اجا",
+    "ItemType_Id": "3f2cd216-26a1-4211-9d48-010641715350",
+    "AttributeSet_Id": null,
+    "ShortDescription": "بانزين موديل 2019",
+    "Description": "",
+    "MultiDimensionalBaseProduct": false,
+    "Parent_Id": null,
+    "Thumbnail": "/uploads/car/fiat01.jpg",
+    "ItemCategories": [
+      {
+        "Id": "44a7c5ed-b59f-4d2a-a40a-b51e62b03e65",
+        "Category_Id": "9ed13d2a-79d4-471a-be1f-f7c602667de6"
+      }
+    ],
+    "ItemFiles": [
+      {
+        "Id": "6948737f-b9f0-4ed2-b4eb-334970ce6de0",
+        "File": "/uploads/car/fiat01.jpg",
+        "LineOrder": 1
+      },
+      {
+        "Id": "d1005d57-a892-4543-b87e-78672e1d45ad",
+        "File": "/uploads/car/fiat01.jpg",
+        "LineOrder": 2
+      }
+    ],
+    "ItemPrices": [
+      {
+        "Id": "040e9855-b77c-4d5b-a7f6-f48d44689e64",
+        "Price": 99.99
+      }
+    ]
+  },
+  {
+    "Id": "280cc559-9be0-4f7a-95c6-a85c9c1e93c4",
+    "Code": "",
+    "Name": "رينولت فلونس",
+    "ItemType_Id": "3f2cd216-26a1-4211-9d48-010641715350",
+    "AttributeSet_Id": null,
+    "ShortDescription": "ديزل موديل 2015",
+    "Description": "",
+    "MultiDimensionalBaseProduct": false,
+    "Parent_Id": null,
+    "Thumbnail": "/uploads/car/renault01.jpg",
+    "ItemCategories": [
+      {
+        "Id": "b8aec4aa-86d4-4070-9b3e-a7fed91ce04d",
+        "Category_Id": "9ed13d2a-79d4-471a-be1f-f7c602667de6"
+      }
+    ],
+    "ItemFiles": [
+      {
+        "Id": "d8f15ce1-be22-4c31-9880-38d92d27afc6",
+        "File": "/uploads/car/renault01.jpg",
+        "LineOrder": 1
+      },
+      {
+        "Id": "46359cf1-98c7-49a2-8698-ad6594144c01",
+        "File": "/uploads/car/renault01.jpg",
+        "LineOrder": 2
+      }
+    ],
+    "ItemPrices": [
+      {
+        "Id": "d4d34dab-66ff-4876-8583-98c3b2bf0367",
+        "Price": 78.54
+      }
+    ]
+  },
+  {
+    "Id": "aa6ec2f7-b21e-4ce5-88dd-f2a334dd223e",
+    "Code": "SR0001",
+    "Name": "خدمات تجارية",
+    "ItemType_Id": "3f2cd216-26a1-4211-9d48-010641715350",
+    "AttributeSet_Id": null,
+    "ShortDescription": "فيز - تسجيل جامعات - تاسيس شركات - رحلات - شحن",
+    "Description": "",
+    "MultiDimensionalBaseProduct": false,
+    "Parent_Id": null,
+    "Thumbnail": "/uploads/s.jpg",
+    "ItemCategories": [
+      {
+        "Id": "baea9e8e-0d04-4700-ae54-00d700a49e03",
+        "Category_Id": "4adb697e-d0b8-4150-b7da-1594d220f92c"
+      }
+    ],
+    "ItemPrices": [
+      {
+        "Id": "6d9ef023-fba9-498d-b80f-8e01a7a50f75",
+        "Price": 0.00
+      }
+    ]
+  }
+]

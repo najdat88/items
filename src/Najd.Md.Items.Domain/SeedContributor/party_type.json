@@ -1,0 +1,14 @@
+﻿[
+  {
+    "Id": "85132af5-a6ec-45ff-a26d-b10edefba2ea",
+    "Code": "001",
+    "Name": "Person",
+    "LineOrder": 1
+  },
+  {
+    "Id": "3f2cd216-26a1-4211-9d48-010641715350",
+    "Code": "002",
+    "Name": "Orgnization",
+    "LineOrder": 2
+  },
+]

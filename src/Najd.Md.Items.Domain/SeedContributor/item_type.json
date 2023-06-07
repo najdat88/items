@@ -1,0 +1,20 @@
+﻿[
+  {
+    "Id": "85132af5-a6ec-45ff-a26d-b10edefba2ea",
+    "Code": "item",
+    "Name": "Item",
+    "LineOrder": 1
+  },
+  {
+    "Id": "3f2cd216-26a1-4211-9d48-010641715350",
+    "Code": "service",
+    "Name": "Service",
+    "LineOrder": 2
+  },
+  {
+    "Id": "7cb96e1f-0886-43e7-aa9b-6f93a8c21280",
+    "Code": "stock",
+    "Name": "Stock",
+    "LineOrder": 3
+  }
+]
