@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Najd.Catalogs;
 using Microsoft.AspNetCore.Authorization;
 using Newtonsoft.Json;
 using Volo.Abp.Application.Dtos;
@@ -17,22 +16,17 @@ namespace Najd.Md.Items
         private readonly IRepository<Item, Guid> _itemRepository;
         private readonly IRepository<ItemPrice, Guid> _itemPriceRepository;
         private readonly IGuidGenerator _guidGenerator;
-        private readonly ICatalogAppService _catalogAppService;
         //private readonly ItemManager _itemManager;
 
         public ItemAppService(
             IRepository<Item, Guid> itemRepository,
             IRepository<ItemPrice, Guid> itemPriceRepository,
-            IGuidGenerator guidGenerator,
-            ICatalogAppService catalogAppService
-            //ItemManager itemManager
+            IGuidGenerator guidGenerator
             )
         {
             _itemRepository = itemRepository;
             _itemPriceRepository = itemPriceRepository;
             _guidGenerator = guidGenerator;
-            _catalogAppService = catalogAppService;
-            //_itemManager = itemManager;
         }
 
         public async Task<ItemDto> GetAsync(Guid id)
@@ -46,33 +40,33 @@ namespace Najd.Md.Items
 
         public async Task<List<ItemDto>> GetListAsync(GetItemListDto input)
         {
-            
-            string Filter_str = input.Filter != null ? input.Filter.ToLower() : "";
+            return new List<ItemDto>();
+            //string Filter_str = input.Filter != null ? input.Filter.ToLower() : "";
 
-            //var items = await _itemRepository.GetListAsync(includeDetails: true);
-            var catalog_items = await _catalogAppService.GetCategoryItems(input.Category_Id.Value);
-            var items = await _itemRepository.WithDetailsAsync(x=>x.ItemFiles,x=>x.ItemPrices);
-            if (input.Category_Id != null)
-            {
-                try
-                {
-                    var result = items.Where(x =>
-                      catalog_items.Contains(x.Id)
-                      &&  (input.Filter == null || x.Name.ToLower().Contains(Filter_str))
-                    ).OrderBy(x => x.Name).ToList();
-                    return ObjectMapper.Map<List<Item>, List<ItemDto>>(result);
-                }
-                catch (Exception e)
-                {
+            ////var items = await _itemRepository.GetListAsync(includeDetails: true);
+            //var catalog_items = await _catalogAppService.GetCategoryItems(input.Category_Id.Value);
+            //var items = await _itemRepository.WithDetailsAsync(x=>x.ItemFiles,x=>x.ItemPrices);
+            //if (input.Category_Id != null)
+            //{
+            //    try
+            //    {
+            //        var result = items.Where(x =>
+            //          catalog_items.Contains(x.Id)
+            //          &&  (input.Filter == null || x.Name.ToLower().Contains(Filter_str))
+            //        ).OrderBy(x => x.Name).ToList();
+            //        return ObjectMapper.Map<List<Item>, List<ItemDto>>(result);
+            //    }
+            //    catch (Exception e)
+            //    {
 
-                    throw;
-                }
-            }
-            else
-            {
-                var result = items.Where(x => input.Filter == null || x.Name.ToLower().Contains(Filter_str)).OrderBy(x => x.Name).ToList();
-                return ObjectMapper.Map<List<Item>, List<ItemDto>>(result);
-            }
+            //        throw;
+            //    }
+            //}
+            //else
+            //{
+            //    var result = items.Where(x => input.Filter == null || x.Name.ToLower().Contains(Filter_str)).OrderBy(x => x.Name).ToList();
+            //    return ObjectMapper.Map<List<Item>, List<ItemDto>>(result);
+            //}
 
         }
         public async Task<ItemDto> Insert(string Values, Guid? Category_Id)
