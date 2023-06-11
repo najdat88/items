@@ -11,8 +11,8 @@ namespace Najd.Md.Items
         Task<ListResultDto<ItemDto>> GetListAsync(GetItemListDto input);
         Task<ItemDto> GetAsync(Guid id);
         Task DeleteAsync(Guid id);
-        Task<ItemDto> InsertAsync(CreateItemDto input);
-        Task<ItemDto> InsertJsonAsync(string values);
+        Task<ItemDto> CreateAsync(CreateItemDto input);
+        Task<ItemDto> CreateJsonAsync(string values);
         Task<ItemDto> UpdateAsync(Guid id, UpdateItemDto input);
         Task<ItemDto> UpdateJsonAsync(Guid id, string values);
         //Task UpdateItemPrice(Guid Key, decimal Cost, decimal Price, decimal AgentPrice);

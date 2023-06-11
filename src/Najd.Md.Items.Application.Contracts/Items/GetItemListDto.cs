@@ -9,6 +9,8 @@ namespace Najd.Md.Items
     {
         public string Filter { get; set; }
         public Guid? Category_Id { get; set; }
-        
+        public Guid? ItemType_Id { get; set; }
+        public Guid? ItemTypeCode { get; set; }
+
     }
 }

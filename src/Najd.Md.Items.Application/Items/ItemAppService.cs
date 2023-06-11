@@ -61,7 +61,7 @@ namespace Najd.Md.Items
             }
 
         }
-        public async Task<ItemDto> InsertAsync(CreateItemDto input)
+        public async Task<ItemDto> CreateAsync(CreateItemDto input)
         {
             Guid pk = _guidGenerator.Create();
             Item item = new Item(pk);
@@ -86,7 +86,7 @@ namespace Najd.Md.Items
 
             return ObjectMapper.Map<Item, ItemDto>(item);
         }
-        public async Task<ItemDto> InsertJsonAsync(string Values)
+        public async Task<ItemDto> CreateJsonAsync(string Values)
         {
             Guid? Category_Id = new Guid();
             Guid pk = _guidGenerator.Create();

@@ -37,15 +37,15 @@ namespace Najd.Md.Items
             await _itemAppService.DeleteAsync(Id);
         }
         [HttpPost]
-        public async Task<ItemDto> InsertAsync(CreateItemDto input)
+        public async Task<ItemDto> CreateAsync(CreateItemDto input)
         {
-            return await _itemAppService.InsertAsync(input);
+            return await _itemAppService.CreateAsync(input);
         }
         [HttpPost]
-        [Route("insert")]
-        public async Task<ItemDto> InsertJsonAsync(string Values)
+        [Route("json")]
+        public async Task<ItemDto> CreateJsonAsync(string Values)
         {
-            return await _itemAppService.InsertJsonAsync(Values);
+            return await _itemAppService.CreateJsonAsync(Values);
         }
 
         [HttpPut("{id:Guid}")]
@@ -53,7 +53,7 @@ namespace Najd.Md.Items
         {
             return await _itemAppService.UpdateAsync(id, input);
         }
-        [HttpPut("update/{id:Guid}")]
+        [HttpPut("json/{id:Guid}")]
         public async Task<ItemDto> UpdateJsonAsync(Guid id, string values)
         {
             return await _itemAppService.UpdateJsonAsync(id, values);
