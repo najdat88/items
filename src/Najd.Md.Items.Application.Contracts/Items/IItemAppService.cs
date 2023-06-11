@@ -8,13 +8,13 @@ namespace Najd.Md.Items
 {
     public interface IItemAppService : IApplicationService 
     {
+        Task<ListResultDto<ItemDto>> GetListAsync(GetItemListDto input);
         Task<ItemDto> GetAsync(Guid id);
-
-        Task<List<ItemDto>> GetListAsync(GetItemListDto input);
-        Task<ItemDto> Insert(string Values, Guid? Category_Id);
-        Task<ItemDto> Update(Guid Key, string Values);
-        Task Delete(Guid Id);
-        Task UpdateItemPrice(Guid Key, decimal Cost, decimal Price, decimal AgentPrice);
-        Task UpdateItemPayLoad(Guid Key, string Values);
+        Task DeleteAsync(Guid id);
+        Task<ItemDto> InsertAsync(CreateItemDto input);
+        Task<ItemDto> InsertJsonAsync(string values);
+        Task<ItemDto> UpdateAsync(Guid id, UpdateItemDto input);
+        Task<ItemDto> UpdateJsonAsync(Guid id, string values);
+        //Task UpdateItemPrice(Guid Key, decimal Cost, decimal Price, decimal AgentPrice);
     }
 }

@@ -12,12 +12,12 @@ public interface IItemsDbContext : IEfCoreDbContext
      */
     #region | Item |
     DbSet<Item> Items { get; }
-    DbSet<ItemObject> ItemObjects { get; }
+    //DbSet<ItemObject> ItemObjects { get; }
     DbSet<ItemType> ItemTypes { get; }
-    DbSet<Attribute> Attributes { get; }
-    DbSet<AttributeSet> AttributeSets { get; }
-    DbSet<AttributeSetLineItem> AttributeSetLineItems { get; }
-    DbSet<ItemFile> ItemFiles { get; }
+    //DbSet<Attribute> Attributes { get; }
+    //DbSet<AttributeSet> AttributeSets { get; }
+    //DbSet<AttributeSetLineItem> AttributeSetLineItems { get; }
+    //DbSet<ItemFile> ItemFiles { get; }
     DbSet<ItemPrice> ItemPrices { get; }
     DbSet<ItemCategory> ItemCategories { get; }
     #endregion

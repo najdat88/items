@@ -21,18 +21,11 @@ namespace Najd.Md.Items
         public string Code { get; set; }
         public string Name { get; set; }
         public Guid ItemType_Id { get; set; }
-        #region | Master Data |
-        public Guid? AttributeSet_Id { get; set; }
-        #endregion
 
         #region | Remarks |
         public string ShortDescription { get; set; }
         public string Description { get; set; }
-        public bool MultiDimensionalBaseProduct { get; set; }
         public string Thumbnail { get; set; }
-        public Guid? Parent_Id { get; set; }
-        public Guid? ItemObject_Id { get; set; }
-        public string WorkflowProcessPayload { get; set; }
         #endregion
         #region | Extra |
         // Set Price Based On Latest active item Price
@@ -67,8 +60,9 @@ namespace Najd.Md.Items
         #endregion
         #endregion
 
-        public virtual ICollection<ItemFileDto> ItemFiles { get; set; }
+        //public virtual ICollection<ItemFileDto> ItemFiles { get; set; }
         public virtual ICollection<ItemPriceDto> ItemPrices { get; set; }
+        public virtual ICollection<ItemCategoryDto> ItemCategories { get; set; }
     }
 
     public class CreateItemDto
@@ -84,21 +78,16 @@ namespace Najd.Md.Items
         public string Code { get; set; }
         public string Name { get; set; }
         public Guid ItemType_Id { get; set; }
-        #region | Master Data |
-        public Guid? AttributeSet_Id { get; set; }
-        #endregion
+        public Guid? Category_Id { get; set; }
 
         #region | Remarks |
         public string ShortDescription { get; set; }
         public string Description { get; set; }
-        public bool MultiDimensionalBaseProduct { get; set; }
-        public Guid? Parent_Id { get; set; }
-        public Guid? ItemObject_Id { get; set; }
         #endregion
         #endregion
 
     }
-    public class UpdateItemDto : ItemDto
+    public class UpdateItemDto
     {
 
         #region | Entity Constructure |
@@ -108,6 +97,14 @@ namespace Najd.Md.Items
         #endregion
 
         #region | Entity Properties |
+        public string Code { get; set; }
+        public string Name { get; set; }
+        public Guid ItemType_Id { get; set; }
+
+        #region | Remarks |
+        public string ShortDescription { get; set; }
+        public string Description { get; set; }
+        #endregion
         #endregion
 
     }

@@ -33,71 +33,81 @@ namespace Najd.Md.Items
         {
             var item = await _itemRepository.GetAsync(id,includeDetails: true);
             await _itemRepository.EnsureCollectionLoadedAsync(item,x=>x.ItemPrices);
-            await _itemRepository.EnsureCollectionLoadedAsync(item,x=>x.ItemFiles);
+            await _itemRepository.EnsureCollectionLoadedAsync(item,x=>x.ItemCategories);
+            //await _itemRepository.EnsureCollectionLoadedAsync(item,x=>x.ItemFiles);
             //await _itemRepository.EnsurePropertyLoadedAsync(item, x => x.ItemPrices);
             return ObjectMapper.Map<Item, ItemDto>(item);
         }
 
-        public async Task<List<ItemDto>> GetListAsync(GetItemListDto input)
+        public async Task<ListResultDto<ItemDto>> GetListAsync(GetItemListDto input)
         {
-            return new List<ItemDto>();
-            //string Filter_str = input.Filter != null ? input.Filter.ToLower() : "";
+            string Filter_str = input.Filter != null ? input.Filter.ToLower() : "";
 
-            ////var items = await _itemRepository.GetListAsync(includeDetails: true);
+            //var items = await _itemRepository.GetListAsync(includeDetails: true);
             //var catalog_items = await _catalogAppService.GetCategoryItems(input.Category_Id.Value);
-            //var items = await _itemRepository.WithDetailsAsync(x=>x.ItemFiles,x=>x.ItemPrices);
-            //if (input.Category_Id != null)
-            //{
-            //    try
-            //    {
-            //        var result = items.Where(x =>
-            //          catalog_items.Contains(x.Id)
-            //          &&  (input.Filter == null || x.Name.ToLower().Contains(Filter_str))
-            //        ).OrderBy(x => x.Name).ToList();
-            //        return ObjectMapper.Map<List<Item>, List<ItemDto>>(result);
-            //    }
-            //    catch (Exception e)
-            //    {
-
-            //        throw;
-            //    }
-            //}
-            //else
-            //{
-            //    var result = items.Where(x => input.Filter == null || x.Name.ToLower().Contains(Filter_str)).OrderBy(x => x.Name).ToList();
-            //    return ObjectMapper.Map<List<Item>, List<ItemDto>>(result);
-            //}
+            var items = await _itemRepository.WithDetailsAsync(x => x.ItemCategories, x => x.ItemPrices);
+            if (input.Category_Id != null)
+            {
+                var result = items.Where(x =>
+                     //catalog_items.Contains(x.Id) &&  
+                     (input.Filter == null || x.Name.ToLower().Contains(Filter_str))
+                   ).OrderBy(x => x.Name).ToList();
+                return new ListResultDto<ItemDto>(items: ObjectMapper.Map<List<Item>, List<ItemDto>>(result));
+            }
+            else
+            {
+                var result = items.Where(x => input.Filter == null || x.Name.ToLower().Contains(Filter_str)).OrderBy(x => x.Name).ToList();
+                return new ListResultDto<ItemDto>(items: ObjectMapper.Map<List<Item>, List<ItemDto>>(result));
+            }
 
         }
-        public async Task<ItemDto> Insert(string Values, Guid? Category_Id)
+        public async Task<ItemDto> InsertAsync(CreateItemDto input)
         {
-            try
+            Guid pk = _guidGenerator.Create();
+            Item item = new Item(pk);
+            item.Serial = 1;
+            //item.ItemType_Id = new Guid("3f2cd216-26a1-4211-9d48-010641715350");
+            if (input.Category_Id != null)
             {
-                Guid pk = _guidGenerator.Create();
-                Item item = new Item(pk);
-                JsonConvert.PopulateObject(Values, item);
-                item.ItemType_Id = new Guid("3f2cd216-26a1-4211-9d48-010641715350");
-                if (Category_Id != null)
-                {
-                    //item.ItemCategories = new List<ItemCategory>();
-                    //item.ItemCategories.Add(new ItemCategory(_guidGenerator.Create(), Category_Id, pk));
-                }
-                await _itemRepository.InsertAsync(item);
-
-                return ObjectMapper.Map<Item, ItemDto>(item);
+                //item.ItemCategories = new List<ItemCategory>();
+                //item.ItemCategories.Add(new ItemCategory(_guidGenerator.Create(), Category_Id, pk));
             }
-            catch (Exception e)
-            {
+            await _itemRepository.InsertAsync(item);
 
-                throw;
-            }
+            return ObjectMapper.Map<Item, ItemDto>(item);
         }
-        public async Task<ItemDto> Update(Guid Key, string Values)
+        public async Task<ItemDto> UpdateAsync(Guid id, UpdateItemDto input)
         {
-            var item = await _itemRepository.GetAsync(Key);
+            var item = await _itemRepository.GetAsync(id);
             if (item == null)
                 return null;
+
+            item.Name = input.Name;
+
+            return ObjectMapper.Map<Item, ItemDto>(item);
+        }
+        public async Task<ItemDto> InsertJsonAsync(string Values)
+        {
+            Guid? Category_Id = new Guid();
+            Guid pk = _guidGenerator.Create();
+            Item item = new Item(pk);
             JsonConvert.PopulateObject(Values, item);
+            item.ItemType_Id = new Guid("3f2cd216-26a1-4211-9d48-010641715350");
+            if (Category_Id != null)
+            {
+                //item.ItemCategories = new List<ItemCategory>();
+                //item.ItemCategories.Add(new ItemCategory(_guidGenerator.Create(), Category_Id, pk));
+            }
+            await _itemRepository.InsertAsync(item);
+
+            return ObjectMapper.Map<Item, ItemDto>(item);
+        }
+        public async Task<ItemDto> UpdateJsonAsync(Guid id, string values)
+        {
+            var item = await _itemRepository.GetAsync(id);
+            if (item == null)
+                return null;
+            JsonConvert.PopulateObject(values, item);
             //await _itemRepository.UpdateAsync(item);
 
             return ObjectMapper.Map<Item, ItemDto>(item);
@@ -105,10 +115,10 @@ namespace Najd.Md.Items
         public async Task UpdateItemPayLoad(Guid Key, string Values)
         {
             var item = await _itemRepository.GetAsync(Key);
-            item.WorkflowProcessPayload = Values;
+            //item.WorkflowProcessPayload = Values;
             await _itemRepository.UpdateAsync(item);
         }
-        public async Task Delete(Guid Id)
+        public async Task DeleteAsync(Guid Id)
         {
             var item = await _itemRepository.GetAsync(Id);
             await _itemRepository.DeleteAsync(item);

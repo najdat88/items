@@ -14,12 +14,12 @@ public class ItemsDbContext : AbpDbContext<ItemsDbContext>, IItemsDbContext
 
     #region | Item |
     public DbSet<Item> Items { get; set; }
-    public DbSet<ItemObject> ItemObjects { get; set; }
+    //public DbSet<ItemObject> ItemObjects { get; set; }
     public DbSet<ItemType> ItemTypes { get; set; }
-    public DbSet<Attribute> Attributes { get; set; }
-    public DbSet<AttributeSet> AttributeSets { get; set; }
-    public DbSet<AttributeSetLineItem> AttributeSetLineItems { get; set; }
-    public DbSet<ItemFile> ItemFiles { get; set; }
+    //public DbSet<Attribute> Attributes { get; set; }
+    //public DbSet<AttributeSet> AttributeSets { get; set; }
+    //public DbSet<AttributeSetLineItem> AttributeSetLineItems { get; set; }
+    //public DbSet<ItemFile> ItemFiles { get; set; }
     public DbSet<ItemPrice> ItemPrices { get; set; }
     public DbSet<ItemCategory> ItemCategories { get; set; }
 

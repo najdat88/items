@@ -22,7 +22,7 @@ namespace Najd.Md.Items
         {
 
         }
-        public ItemCategory(Guid id,Guid? category_Id,Guid? item_Id)
+        public ItemCategory(Guid id,Guid category_Id,Guid item_Id)
     : base(id)
         {
             Category_Id = category_Id;
@@ -32,9 +32,9 @@ namespace Najd.Md.Items
 
         #region | Entity Properties |
         [Column("category_id")]
-        public Guid? Category_Id { get; set; }
+        public Guid Category_Id { get; set; }
         [Column("item_id")]
-        public Guid? Item_Id { get; set; }
+        public Guid Item_Id { get; set; }
         #endregion
 
         #region | Entity Reference |

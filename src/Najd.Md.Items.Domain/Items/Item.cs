@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.SymbolStore;
 using Volo.Abp.Domain.Entities.Auditing;
 
 
@@ -30,10 +31,10 @@ namespace Najd.Md.Items
         {
 
         }
-        public Item(string Code, string Name)
+        public Item(string code, string name)
         {
-            this.Code = Code;
-            this.Name = Name;
+            this.Code = code;
+            this.Name = name;
         }
         #endregion
 
@@ -41,6 +42,8 @@ namespace Najd.Md.Items
         [Column("code")]
         [MaxLength(MaxCodeLength)]
         public string Code { get; set; }
+        [Column("serial")]
+        public int Serial { get; set; }
         [Column("name")]
         [Required]
         [MaxLength(MaxNameLength)]
@@ -71,8 +74,8 @@ namespace Najd.Md.Items
         /// Based on Item Type
         /// </summary>
         #region | Master Data |
-        [Column("attribute_set_id")]
-        public Guid? AttributeSet_Id { get; set; }
+        //[Column("attribute_set_id")]
+        //public Guid? AttributeSet_Id { get; set; }
         #endregion
 
         #region | General |
@@ -96,38 +99,40 @@ namespace Najd.Md.Items
         #region | Remarks |
         [Column("short_description")]
         [MaxLength(MaxShortDescriptionLength)]
-        public string ShortDescription { get; set; }
+        public string? ShortDescription { get; set; }
         [Column("description")]
-        public string Description { get; set; }
+        public string? Description { get; set; }
         #endregion
 
         [Column("thumbnail")]
-        public string Thumbnail { get; set; }
+        public string? Thumbnail { get; set; }
 
-        [Column("multi_dimensional_base_product")]
-        public bool MultiDimensionalBaseProduct { get; set; }
+        //[Column("multi_dimensional_base_product")]
+        //public bool MultiDimensionalBaseProduct { get; set; }
         /// <summary>
         /// Used for Multi-Dimensional Base Product
         /// variant product generated using product builder
         /// </summary>
-        [Column("parent_id")]
-        public Guid? Parent_Id { get; set; }
-        [Column("item_object_id")]
-        public Guid? ItemObject_Id { get; set; }
+        //[Column("parent_id")]
+        //public Guid? Parent_Id { get; set; }
+        //[Column("item_object_id")]
+        //public Guid? ItemObject_Id { get; set; }
 
-        [Column("workflow_process_payload")]
-        public string WorkflowProcessPayload { get; set; }
+        //[Column("workflow_process_payload")]
+        //public string WorkflowProcessPayload { get; set; }
         #endregion
 
+        [Column("ative")]
+        public bool Ative { get; set; }
         #region | Entity Reference |
         [ForeignKey(nameof(ItemType_Id))]
         public virtual ItemType ItemType { get; set; }
-        [ForeignKey(nameof(ItemObject_Id))]
-        public virtual ItemObject ItemObject { get; set; }
+        //[ForeignKey(nameof(ItemObject_Id))]
+        //public virtual ItemObject ItemObject { get; set; }
 
-        [ForeignKey(nameof(AttributeSet_Id))]
-        public AttributeSet AttributeSet { get; set; }
-        public virtual ICollection<ItemFile> ItemFiles { get; set; }
+        //[ForeignKey(nameof(AttributeSet_Id))]
+        //public AttributeSet AttributeSet { get; set; }
+        //public virtual ICollection<ItemFile> ItemFiles { get; set; }
         public virtual ICollection<ItemPrice> ItemPrices { get; set; }
         public virtual ICollection<ItemCategory> ItemCategories { get; set; }
         #endregion
